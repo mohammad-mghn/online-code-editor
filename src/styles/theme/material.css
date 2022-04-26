@@ -1,0 +1,93 @@
+.cm-s-material.CodeMirror {
+  background-color: #050505 !important;
+  color: #546e7a !important;
+}
+.cm-s-material .CodeMirror-cursor {
+  border-left: 2px solid #ffcc00 !important;
+}
+.cm-s-material div.CodeMirror-selected {
+  background: rgba(128, 203, 196, 0.4) !important;
+}
+.cm-s-material .cm-keyword {
+  color: #07d6e1 !important;
+}
+
+.cm-s-material .cm-operator {
+  color: #1e96c6 !important;
+}
+
+.cm-s-material .cm-variable-2 {
+  color: #eeffff !important;
+}
+
+.cm-s-material .cm-variable-3,
+.cm-s-material .cm-type {
+  color: #ff000d !important;
+}
+
+.cm-s-material .cm-builtin {
+  color: #ffcb6b !important;
+}
+
+.cm-s-material .cm-atom {
+  color: #f63900 !important;
+}
+
+.cm-s-material .cm-number {
+  color: #e5062c !important;
+}
+
+.cm-s-material .cm-def {
+  color: #0051ff !important;
+}
+
+.cm-s-material .cm-string {
+  color: #13a3a8 !important;
+}
+
+.cm-s-material .cm-string-2 {
+  color: #e80813 !important;
+}
+
+.cm-s-material .cm-comment {
+  color: #546e7a !important;
+}
+
+.cm-s-material .cm-variable {
+  color: #d20505 !important;
+}
+
+.cm-s-material .cm-tag {
+  color: #de1010 !important;
+}
+
+.cm-s-material .cm-meta {
+  color: #e29e1e !important;
+}
+
+.cm-s-material .cm-attribute {
+  color: #9f14fb !important;
+}
+
+.cm-s-material .cm-property {
+  color: #eba308 !important;
+}
+
+.cm-s-material .cm-qualifier {
+  color: #d5b515 !important;
+}
+
+.cm-s-material .cm-variable-3,
+.cm-s-material .cm-type {
+  color: #decb6b !important;
+}
+
+.cm-s-material .cm-error {
+  color: rgb(237, 0, 0) !important;
+  background-color: #3c0c14 !important;
+}
+
+.cm-s-material .CodeMirror-matchingbracket {
+  text-decoration: underline !important;
+  color: #00ffd9 !important;
+}
