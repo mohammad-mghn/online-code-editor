@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 
 import "../styles/editor.css";
+import "../styles/theme/material.css";
+
+import collapseIcon from "../Assists/icons/collapse-icon.png";
+import extendIcon from "../Assists/icons/extend-icon.png";
+
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/material.css";
-import "codemirror/theme/default.css";
 import "codemirror/theme/mdn-like.css";
 import "codemirror/theme/the-matrix.css";
 import "codemirror/theme/night.css";
-import "../styles/theme/material.css";
+import "codemirror/theme/dracula.css";
+import "codemirror/theme/ayu-dark.css";
+import "codemirror/theme/oceanic-next.css";
+import "codemirror/theme/ayu-dark.css";
+import "codemirror/theme/midnight.css";
+import "codemirror/theme/rubyblue.css";
+import "codemirror/theme/idea.css";
 
 import "codemirror/mode/xml/xml";
 import "codemirror/mode/javascript/javascript";
@@ -18,32 +28,26 @@ import "codemirror/addon/edit/closetag";
 
 import { Controlled as EditorField } from "react-codemirror2";
 
-import collapseIcon from "../Assists/icons/collapse-icon.png";
-import extendIcon from "../Assists/icons/extend-icon.png";
-
-import HTMLLogo from "../Assists/icons/html-icon.png";
-import CssLogo from "../Assists/icons/css-icon.png";
-import JsLogo from "../Assists/icons/js-icon.png";
-
 function Editor(props) {
-  const { onChangeHandler, value, theme, language, logo, header } = props;
+  const { onChangeHandler, defaultValue, value, theme, language, logo, header } =
+    props;
 
   const [IsOpen, setIsOpen] = useState(true);
 
   const handleChange = (editor, data, value) => {
     onChangeHandler(value);
   };
-  // if (theme === "material"){
-  //   document.querySelector(".cm-s-material .CodeMirror-gutters").style.backgroundColor = "aqua !important";
-  // }
+
   return (
-    <div className={`editor-main-container ${IsOpen ? `sss` : `s2s`}`}>
+    <div
+      className={`editor-main-container ${IsOpen ? `extended` : `collapsed`}`}
+    >
       <div className="editor-navigator">
         <div className="editor-title-and-logo">
           <img src={logo} alt="" className="editor-logo" />
           <h4
             className={`edtior-title ${language} ${
-              !IsOpen ? "header-display" : ""
+              !IsOpen && "header-display"
             }`}
           >
             {header}
@@ -66,6 +70,7 @@ function Editor(props) {
           value={value}
           className="code-mirror-wrapper"
           options={{
+            value: defaultValue,
             lineWrapping: true,
             lineWiseCopyCut: true,
             lint: true,

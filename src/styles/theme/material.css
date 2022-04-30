@@ -1,6 +1,11 @@
 .cm-s-material.CodeMirror {
   background-color: #050505 !important;
   color: #546e7a !important;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.cm-s-material .CodeMirror-gutters {
+  background-color: #050505 !important;
 }
 .cm-s-material .CodeMirror-cursor {
   border-left: 2px solid #ffcc00 !important;
