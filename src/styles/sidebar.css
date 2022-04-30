@@ -8,7 +8,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: rgb(5, 5, 5);
+  background-color: #050505;
   border-radius: 12.5px;
   animation: wipe 1s;
   transform-style: preserve-3d;
