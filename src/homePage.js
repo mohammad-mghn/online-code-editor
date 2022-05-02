@@ -16,9 +16,9 @@ import JsLogo from "./Assists/icons/js-icon.png";
 import "./styles/homePage.css";
 
 function HomePage() {
-  const [html, setHtml] = Uselocalstorge("html");
-  const [css, setCss] = Uselocalstorge("css");
-  const [js, setJs] = Uselocalstorge("js");
+  const [html, setHtml] = Uselocalstorge("html", "");
+  const [css, setCss] = Uselocalstorge("css", "");
+  const [js, setJs] = Uselocalstorge("js", "");
 
   // Codemirror requires different states for
   // default value (restored value from locaStorge)
@@ -49,14 +49,12 @@ function HomePage() {
           
         `
       );
-    }, 1000);
+    }, 500);
 
     return () => clearTimeout(timeOut);
   }, [html, css, js]);
 
-  // this part is for Ctrl+S for saving and Ctrl+R
-  // for reloading page!
-
+  // this part is for Ctrl+S for saving
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey && e.key === "s") || e.key === "r") {
       e.preventDefault();
